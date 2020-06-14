@@ -1,6 +1,7 @@
 const monthly = [...document.querySelectorAll('.monthly')];
 const annually = [...document.querySelectorAll('.annually')];
-const checkbox = document.querySelectorAll('#checkbox');
+const checkboxList = document.querySelectorAll('#checkbox');
+const checkbox = checkboxList[0]
 
 function priceSwitch () {
     if (checkbox.checked) {
@@ -29,10 +30,8 @@ function checkKey(e) {
     }
 }
 
-for (var i = 0 ; i < checkbox.length; i++) {
-checkbox[i].addEventListener('click', priceSwitch);
-};
-for (var j = 0 ; i < checkbox.length; j++) {
-checkbox[j].addEventListener('keypress', checkKey);
-};
+
+checkbox.addEventListener('click', priceSwitch);
+checkbox.addEventListener('keypress', checkKey);
+
 
